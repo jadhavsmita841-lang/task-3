@@ -1,0 +1,65 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;                  /* Enables flexbox */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center;            /* Vertically center items */
+    background-color: #333;
+    padding: 15px 30px;
+    color: white;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;                  /* Horizontal menu */
+    list-style: none;
+    gap: 20px;                      /* Space between items */
+}
+
+.nav-links li {
+    cursor: pointer;
+}
+
+/* Card container */
+.card-container {
+    display: flex;                  /* Flex layout */
+    justify-content: center;        /* Center cards */
+    align-items: center;
+    flex-wrap: wrap;                /* Move cards to next line on small screens */
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Individual card */
+.card {
+    background: #f4f4f4;
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;     /* Stack items vertically */
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
